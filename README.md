@@ -5,17 +5,17 @@ OnewirePoller.php is a script that polls thru OWFS (1-Wire File System) and prin
 
 ## Motivation
 
-This script borned in Raspberry pi where I am running OWFS where I have large amount of 1-Wire sensors. This script eases to see when new sensors comes up and from existing you can see clear output. This script is able also to store results in txt files as well as send those via json.
+This script borned in Raspberry pi where I am running OWFS where I have large amount of 1-Wire sensors. This script makes it easier to see when new sensors comes up and from existing you can see clear output. This script is able also to store results in txt files as well as send those via json.
 
 ## Installation
 
 set following in script 
-DEFINE ("LOG2JSON",1);                # Do you want to upload results with json
-DEFINE ("UPDATE",1);                  # Do you want to update json/txt endpoints at all?
+DEFINE ("LOG2JSON",1); # Do you want to upload results with json
+DEFINE ("UPDATE",1); # Do you want to update json/txt endpoints at all?
 DEFINE ("LOGDIR","/var/www/logger/"); # Where results are saved (txt file))
-DEFINE ("LOGURL","<json url>");       # Where results are pushed (json endpoint)
-DEFINE ("OWDIR","/media/1-wire/");    # OWFS location
-DEFINE ("DEBUG",0);                   # Do you want script to make any output
+DEFINE ("LOGURL","<json url>"); # Where results are pushed (json endpoint)
+DEFINE ("OWDIR","/media/1-wire/"); # OWFS location
+DEFINE ("DEBUG",0); # Do you want script to make any output
 
 following array descriptes your sensors and types. if sensor is not listed, you will get prompt about it. You have to add address to array if you want any output from that sensor.
 
