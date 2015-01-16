@@ -9,17 +9,24 @@ This script borned in Raspberry pi where I am running OWFS where I have large am
 
 ## Installation
 
-set following in script 
+set following in script
+
 DEFINE ("LOG2JSON",1); # Do you want to upload results with json
+
 DEFINE ("UPDATE",1); # Do you want to update json/txt endpoints at all?
+
 DEFINE ("LOGDIR","/var/www/logger/"); # Where results are saved (txt file))
+
 DEFINE ("LOGURL","<json url>"); # Where results are pushed (json endpoint)
+
 DEFINE ("OWDIR","/media/1-wire/"); # OWFS location
+
 DEFINE ("DEBUG",0); # Do you want script to make any output
 
-following array descriptes your sensors and types. if sensor is not listed, you will get prompt about it. You have to add address to array if you want any output from that sensor.
+following array descriptes your sensors and types. if sensor is not listed, you will get prompt about it. You have to add address to array if you want any output from that sensor. 
 
 $devices['28.FFEC65760400'] = array('sensor'=>array('temperature'),'description'=>'livingroom temperature','tags'=>array('livingroom','temperature'));
+
 $devices['12.2E30B7000000'] = array('sensor'=>array('latch.B'),'description'=>'livingroom','tags'=>array('livingroom','door'));
 
 ## Usage
